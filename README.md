@@ -27,3 +27,21 @@ aws iam attach-role-policy \
   --role-name lambda-role \
   --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ```
+
+```shell
+aws lambda create-function \
+    --role arn:aws:iam::548250577290:role/lambda-role \
+    --function-name learn-lambda-typescript \
+    --package-type Image \
+    --code "ImageUri=548250577290.dkr.ecr.ap-southeast-1.amazonaws.com/learn-lambda-typescript:latest"
+
+aws lambda get-function --function-name learn-lambda-typescript
+```
+
+```shell
+aws lambda invoke \
+    --no-cli-pager \
+    --function-name learn-lambda-typescript \
+    response.json
+cat response.json
+```
