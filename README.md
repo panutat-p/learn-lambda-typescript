@@ -3,7 +3,7 @@
 ```shell
 npm i -D typescript
 tsc --init
-npm i -D ts-node 
+npm i -D ts-node
 npm i -D esbuild
 npm i -D prettier
 npm i -D eslint
