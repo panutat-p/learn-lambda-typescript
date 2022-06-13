@@ -6,7 +6,7 @@ const command = new ListBucketsCommand({});
 
 try {
   const response = await client.send(command);
-  console.log(`Total: ${response.Buckets?.length}`)
+  console.log(`Total: ${response.Buckets?.length}`);
   console.log(response.Buckets);
 } catch (e) {
   console.log(e);
