@@ -18,6 +18,15 @@ npm i base-64
 npm i -D @types/base-64
 ```
 
+https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-create-from-base
+
+```shell
+docker build -t hello-ts .   
+docker run -p 9000:8080 hello-ts
+curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+```
+
+
 ```shell
 aws iam create-role \
   --role-name lambda-role \
